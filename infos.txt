@@ -1,0 +1,5 @@
+No Package Manager Console
+	Projeto Padrão: Data / DbContext
+	Projeto de Inicialização: AnelApi.
+
+	Add-Migration TipoAnel

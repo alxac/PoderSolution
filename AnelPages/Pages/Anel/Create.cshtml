@@ -1,0 +1,45 @@
+﻿@page "/Anel/Novo"
+@using Dominio
+@model CreateModel
+
+<h2>Adicionar Novo Anel</h2>
+
+<validation-summary></validation-summary>
+
+<form method="post">
+    <div class="form-group">
+        <label for="Nome">Nome</label>
+        <input type="text" id="Nome" name="Nome" class="form-control" asp-for="Anel.Nome" />
+        <span asp-validation-for="Anel.Nome" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label for="Poder">Poder</label>
+        <input type="text" id="Poder" name="Poder" class="form-control" asp-for="Anel.Poder" />
+        <span asp-validation-for="Anel.Poder" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label for="Portador">Portador</label>
+        <input type="text" id="Portador" name="Portador" class="form-control" asp-for="Anel.Portador" />
+        <span asp-validation-for="Anel.Portador" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label for="ForjadoPor">Forjado Por</label>
+        <input type="text" id="ForjadoPor" name="ForjadoPor" class="form-control" asp-for="Anel.ForjadoPor" />
+        <span asp-validation-for="Anel.ForjadoPor" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label for="Imagem">Imagem</label>
+        <input type="text" id="Imagem" name="Imagem" class="form-control" asp-for="Anel.Imagem" />
+        <span asp-validation-for="Anel.Imagem" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label for="TipoAnel">Tipo de Anel</label>
+        <select id="TipoAnel" name="TipoAnel" class="form-control" asp-for="Anel.TipoAnel" asp-items="Html.GetEnumSelectList<TipoAnel>()"></select>
+        <span asp-validation-for="Anel.TipoAnel" class="text-danger"></span>
+    </div>
+    <button type="submit" class="btn btn-primary">Adicionar</button>
+</form>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

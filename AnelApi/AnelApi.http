@@ -1,0 +1,6 @@
+@AnelApi_HostAddress = http://localhost:5121
+
+GET {{AnelApi_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
